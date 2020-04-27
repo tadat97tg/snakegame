@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake</title>
+	<style>
+		body {
+			background-image: url('./wall.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#canvas {
+			background-color: black;
+		}
+
+		#textDiem {
+			font-size: 20px;
+			margin: 15px 0;
+		}
+
+		#start {
+			display: block;
+			width: 100px;
+			height: 50px;
+		}
+
+		#ready {
+			display: none;
+		}
+
+		#modeKey {
+			display: none;
+		}
+
+		#textDiem {
+			display: none;
+			color: blue;
+			font-weight: bold;
+		}
+
+		#ketQua {
+			padding: 15px 0;
+			color: red;
+			font-weight: bold;
+			display: none;
+			font-size: 20px;
+		}
+		
+		.containerMode {
+			width: 500px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#lightScore {
+			padding: 15px 0;
+			color: #1ff77f;
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.mode {
+			display: inline;
+			padding: 5px 10;
+			margin: 10px 0px 10px 0;
+			width: 100px;
+			height: 40px;
+			background-color: red;
+			color: yellow;
+			font-weight: bolder;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<canvas id="canvas" width='500px' height='500px'></canvas>
+		<div class="containerMode">
+			<button id="easy" class ="mode">Dễ</button>
+			<button id="medium" class ="mode">Trung Bình</button>
+			<button id="hard" class ="mode">Khó</button>
+			<button id="veryHard" class ="mode">Rất khó</button>
+		</div>
+		<div id="textDiem">Điểm: <span id="diem"></span></div>
+		<div id="lightScore"></div>
+		<div id="ketQua"></div>
+		<button id="start">Bắt đầu</button>
+		<p id="ready">Nhấn phím <strong>S</strong> hoặc nhấn nút <strong>Bắt đầu</strong> để tiếp tục</p>
+		<p id="modeKey">Nhấn phím <strong>Q || W || E || R</strong> hoặc các nút tương ứng để đổi chế độ</p>
+	</div>
+	
+	<script src="./snack.js"></script>
+</body>
+</html>
